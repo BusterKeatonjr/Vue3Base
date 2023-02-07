@@ -2,25 +2,23 @@
 export default {
 	data() {
 		return {
-      num2: 2,
-      num3: 3,
+      text: 'xxx',
 		}
 },
 methods: {
-	show: function() {
-    alert(this.num2 * 2); 
+	change: function() {
+		this.text = 'yyy';
+},
+change1: function() {
+		this.text = 'aaa';
+	}
 
-     
-	},
-  bob: function(){
-    alert(this.num3 * 3); 
-  }
 }
 }
 </script>
 <template>
-
-<button @click="show">btn1</button>
-	<button @click="bob">btn2</button>
+{{ text }} <br>
+<button @click="change" >switch1</button><br>
+<button @click="change1" >switch2</button> 
 </template>
 

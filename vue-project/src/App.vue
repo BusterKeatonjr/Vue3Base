@@ -15,6 +15,7 @@ methods: {
 }
 </script>
 <template>
-	{{ show() }}
+  <button @click="show">text</button> <br>
+	<button @mouseenter="show">text</button>
 </template>
 

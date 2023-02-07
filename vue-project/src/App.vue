@@ -2,22 +2,20 @@
 export default {
 	data() {
 		return {
-      cost: 10,
-      amount:4,
+     text:'abiba',
+      url:'https://code.mu/ru/javascript/framework/vue/book/prime/basis/events-modifiers/',
 		}
 },
-computed: {
-	price: function() {
-		return this.cost * this.amount;
-	},
-  change: function(){
-    this.cost = 8
-  }
+methods: {
+    warning: function(){
+      alert('one click');
+    }
 }
 }
+
 </script>
 <template>
- {{ price }} <br>
- <button @click="change">swich</button>
+ <a @click.prevent :href=url>{{ text }}</a> <br>
+ <button @click.once="warning"> click </button>
 </template>
 

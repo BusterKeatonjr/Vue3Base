@@ -2,23 +2,22 @@
 export default {
 	data() {
 		return {
-      text: 'xxx',
+      cost: 10,
+      amount:4,
 		}
 },
-methods: {
-	change: function() {
-		this.text = 'yyy';
-},
-change1: function() {
-		this.text = 'aaa';
-	}
-
+computed: {
+	price: function() {
+		return this.cost * this.amount;
+	},
+  change: function(){
+    this.cost = 8
+  }
 }
 }
 </script>
 <template>
-{{ text }} <br>
-<button @click="change" >switch1</button><br>
-<button @click="change1" >switch2</button> 
+ {{ price }} <br>
+ <button @click="change">swich</button>
 </template>
 

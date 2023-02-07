@@ -2,12 +2,19 @@
 export default {
 	data() {
 		return {
-			obj: {x: 1, y: 2, z: 3},
+			
 		}
+},
+methods: {
+	show: function() {
+    const current = new Date();
+    const date = `${current.getDate()}/${current.getMonth() + 1}/${current.getFullYear()}`;
+    alert(date);
 	}
+}
 }
 </script>
 <template>
-	{{ obj.x + obj.y + obj.z }}
+	{{ show() }}
 </template>
 

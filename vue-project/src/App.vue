@@ -2,18 +2,23 @@
 export default {
 	data() {
 		return {
-     text:'aboba',
-     visible: true, 
+
+     visible: false, 
      
 		}
 },
-
+methods: {
+	
+	hide: function() {
+		this.visible = true;
+	}
+}
 }
 
 
 </script>
 <template>
-<p v-if="visible">text</p>
-<p v-if="!visible">text</p>
+	<button @click="hide">hide</button>
+	<p v-if="visible">text</p>
 </template>
 

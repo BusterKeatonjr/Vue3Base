@@ -15,14 +15,13 @@ export default {
 };
 </script>
 <template>
-  <button @click="this.obj.hidden = false">hide </button>
-  <button @click="this.obj.hidden = true">hide </button>
-  <button @click="setDone">{{ obj.hidden ? "show" : "hide" }} </button><br />
-  <p>&nbsp;&nbsp;&nbsp;&nbsp;</p>
-  <p :class="obj"></p>
+  <p :class="{active: true, valid: false,}"></p>
 </template>
 <style>
-p.hidden {
-  display: none;
+.active {
+  border: 5px solid red;
+}
+.valid {
+  color: green;
 }
 </style>

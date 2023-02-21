@@ -1,26 +1,17 @@
 <script>
 export default {
   data() {
-    return {
-      isValid: true,
-      isDisabled: true,
-    };
+    return {};
   },
-  methods: {
-    setDone: function () {
-      this.obj.hidden = !this.obj.hidden;
-    },
-  },
+  methods: {},
 };
 </script>
 <template>
-  <p :class="{ active: isValid, valid: isDisabled }"></p>
+  <p :style="{ color: 'green', background: 'yellow', fontSize: '30px' }">
+  1
+  </p>
+  &nbsp; &nbsp; &nbsp;
+  <p :style="{ fontWeight: 'bold', fontStyle: 'italic', fontSize: '30px' }">
+  2
+  </p>
 </template>
-<style>
-.active {
-  border: 5px solid red;
-}
-.valid {
-  color: green;
-}
-</style>

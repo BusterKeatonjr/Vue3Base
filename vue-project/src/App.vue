@@ -1,75 +1,45 @@
 <script>
-export default{
-data(){
-  return{
-    users: [
-      {
-        id: 1,
-        name: 'name1',
-        salary: 100,
-        age: 12,
-      },
-      {
-        id: 2,
-        name: 'name2',
-        salary: 200,
-        age: 12,
-      },
-      {
-        id: 3,
-        name: 'name3',
-        salary: 300,
-        age: 12,
-      },
-    ],
-  }
+	export default {
+		data() {
+      return {
+        
+	} 
 },
-methods: {
-  edit(user) {
-    user.isEdit = true;
-  },
-  save(user) {
-    user.isEdit = false;
-  },
-}
-}
+  }
 </script>
-
-<template>
-  <!-- <ul>
-    <li v-for="user in users" :key="user.id">
-<template v-if="!user.isEdit">
-  {{ user.name }}
-  {{ user.surn }}
-  <button @click="edit(user)">
-    edit
-  </button>
-</template>
-<template v-else>
-  <input v-model="user.name">
-  <input v-model="user.surn">
-  <button @click="save(user)">
-    save
-  </button>
-</template>
-    </li>
-  </ul> -->
-<table class="user">
-<tr v-for="user in users" :key="user.id"> 
-<template v-if="!user.isEdit">
-  {{ user.name }} {{ user.salary }} {{ user.age }}<button class="button" @click="edit(user)">edit</button>
-</template>
-<template v-else>
-  <input v-model="user.name">
-  <input v-model="user.salary">
-  <input v-model="user.age">
-  <button class="button" @click="save(user)">
-      save
-  </button>
-</template>
-</tr>
-</table>
+<template >
+		<p>components</p>
+	
 </template>
 
 <style scoped>
+header {
+  line-height: 1.5;
+  
+}
+.logo {
+  display: block;
+  margin: 0 auto 2rem;
+}
+@media (min-width: 1024px) {
+ul
+{
+  text-transform:uppercase;
+}
+  p {
+    color: red;
+    border: '1px solid green'
+    
+}
+  .logo {
+    margin: 0 2rem 0 0;
+    
+  }
+  header .wrapper {
+    
+    display: flex;
+    place-items: flex-start;
+    flex-wrap: wrap;
+  }
+}
 </style>

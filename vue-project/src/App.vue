@@ -10,19 +10,23 @@ export default {
     User
   },
   methods: {
-    jujuba() {
-      alert('Roblox');
+    userName(name) {
+      console.log(name);
     },
-    capybara(){
-      alert('CEPU')
+    userSalary(name, salary){
+console.log(name, salary);
     }
   }
 }
 </script>
 
 <template>
-<User @show="jujuba" @show1="capybara" />
+<User @show="userName" @show1="userSalary"/>
 </template>
+
+
+<style scoped>
+</style>
 
 
 <style scoped>

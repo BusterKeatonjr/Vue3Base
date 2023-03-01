@@ -25,18 +25,48 @@ data(){
   }
 },
 methods: {
-  removeUser: function (id) {
-    this.users = this.users.filter((user) => {
-      return user.id !== id;
-    })
-  }
+  edit(user) {
+    user.isEdit = true;
+  },
+  save(user) {
+    user.isEdit = false;
+  },
 }
 }
 </script>
 
 <template>
+  <!-- <ul>
+    <li v-for="user in users" :key="user.id">
+<template v-if="!user.isEdit">
+  {{ user.name }}
+  {{ user.surn }}
+  <button @click="edit(user)">
+    edit
+  </button>
+</template>
+<template v-else>
+  <input v-model="user.name">
+  <input v-model="user.surn">
+  <button @click="save(user)">
+    save
+  </button>
+</template>
+    </li>
+  </ul> -->
 <table class="user">
-  <tr v-for="user in users" :key="user.id"> {{ user.name }} {{ user.salary }} {{ user.age }} <button class="button" @click="removeUser(users.id)">remove</button>
+<tr v-for="user in users" :key="user.id"> 
+<template v-if="!user.isEdit">
+  {{ user.name }} {{ user.salary }} {{ user.age }}<button class="button" @click="edit(user)">edit</button>
+</template>
+<template v-else>
+  <input v-model="user.name">
+  <input v-model="user.salary">
+  <input v-model="user.age">
+  <button class="button" @click="save(user)">
+      save
+  </button>
+</template>
 </tr>
 </table>
 </template>

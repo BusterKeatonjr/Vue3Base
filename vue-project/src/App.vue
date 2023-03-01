@@ -1,5 +1,5 @@
 <script>
-import User from './components/User.vue'
+import User from './components/Employee.vue'
 export default {
   data() {
     return {

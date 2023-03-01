@@ -13,20 +13,13 @@ export default {
     userName(name) {
       console.log(name);
     },
-    userSalary(name, salary){
-console.log(name, salary);
-    }
   }
 }
 </script>
 
 <template>
-<User @show="userName" @show1="userSalary"/>
+<User @show="userName"/>
 </template>
-
-
-<style scoped>
-</style>
 
 
 <style scoped>
